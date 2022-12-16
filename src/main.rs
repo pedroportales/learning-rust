@@ -1,3 +1,8 @@
 fn main() {
-    println!("Hello, world!");
+    let total = 30;
+    { // inicio
+        let total = "quarenta";
+        println!(" Trabalhou {} horas", total);
+    } // fim
+    println!(" Trabalhou {} horas", total);
 }
