@@ -14,11 +14,18 @@ fn main() {
 
     // println!("{s}");
 
-    let mut s = String::new();
+    let mut s: String = String::new();
     
-    print!("Digite um texto: ");
+    println!("Digite um texto: ");
     io::stdin().read_line(&mut s).expect("Error reading console");
 
+    
     println!("Você digitou {s}");
-    println!("Quantidade de letras: {}", s.trim().len())
+    println!("Quantidade de letras: {}", s.trim().len());
+    
+    soma(5, 2);
+}
+
+fn soma(a: u32, b: u32) {
+    println!("{}", a + b);
 }
