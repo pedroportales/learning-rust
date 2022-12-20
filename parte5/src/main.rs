@@ -17,7 +17,9 @@ fn main() {
     let mut s: String = String::new();
     
     println!("Digite um texto: ");
-    io::stdin().read_line(&mut s).expect("Error reading console");
+    io::stdin()
+        .read_line(&mut s)
+        .expect("Error reading console");
 
     
     println!("Você digitou {s}");
