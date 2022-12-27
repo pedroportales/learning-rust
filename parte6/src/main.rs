@@ -16,8 +16,19 @@ fn main() {
         .read_line(&mut s)
         .expect("Error reading console");
 
-    
-    println!("Você digitou {s}");
+    //fn clean(c: &str) -> &str {
+    //    c.trim();
+    //}
+
+    let nums: Vec<i32> = s
+        .split(",")
+        //.map(clean)
+        .map(|c| c.trim().parse().expect("Error"))
+        .collect();
+
+    println!("Você digitou {:?}", nums);
+
+
     // println!("Quantidade de letras: {}", s.trim().chars());
     
     println!("{}", "-".repeat(40));
